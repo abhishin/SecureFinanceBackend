@@ -3,6 +3,7 @@ package com.SecureFinence.main.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestPart;
@@ -11,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.SecureFinence.main.model.Customer;
 import com.SecureFinence.main.service.CustomerService;
-
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/customer")
 public class CustomerController {
