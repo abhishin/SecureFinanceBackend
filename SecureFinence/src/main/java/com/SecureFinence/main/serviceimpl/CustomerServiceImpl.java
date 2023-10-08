@@ -40,24 +40,24 @@ public class CustomerServiceImpl implements CustomerService{
 			
 			CustomerLocalAddress customerLocalAddress=mapper.readValue(customerladdr, CustomerLocalAddress.class);
 			CustomerBankDetails customerBankDetails =mapper.readValue(bankDetails, CustomerBankDetails.class);
-			
-			customer.setCustomerPermantAddress(customerPermantAddress);
-			customer.setCustomerLocalAddress(customerLocalAddress);
-			customer.setCustomerBankDetails(customerBankDetails);
+//			
+//			customer.setCustomerPermantAddress(customerPermantAddress);
+//			customer.setCustomerLocalAddress(customerLocalAddress);
+//			customer.setCustomerBankDetails(customerBankDetails);
 			
 			CustomerDocuments customerDocuments=new CustomerDocuments();
 			
-			customerDocuments.setCustomerAdhar(aadimg.getBytes());
-			customerDocuments.setCustomerBAnkStatement(statement.getBytes());
-			customerDocuments.setCustomerCarQuotation(quationdoc.getBytes());
-			customerDocuments.setCustomerForm16(form16g.getBytes());
-			customerDocuments.setCustomerITR(itrDoc.getBytes());
-			customerDocuments.setCustomerPan(panimg.getBytes());
-			customerDocuments.setCustomerProfilePhoto(panimg.getBytes());
-			customerDocuments.setCustomerSalarySlip(salaryslipimg.getBytes());
-			customerDocuments.setCustomerSignature(signimg.getBytes());
-			
-			customer.setCustomerDocuments(customerDocuments);
+//			customerDocuments.setCustomerAdhar(aadimg.getBytes());
+//			customerDocuments.setCustomerBAnkStatement(statement.getBytes());
+//			customerDocuments.setCustomerCarQuotation(quationdoc.getBytes());
+//			customerDocuments.setCustomerForm16(form16g.getBytes());
+//			customerDocuments.setCustomerITR(itrDoc.getBytes());
+//			customerDocuments.setCustomerPan(panimg.getBytes());
+//			customerDocuments.setCustomerProfilePhoto(panimg.getBytes());
+//			customerDocuments.setCustomerSalarySlip(salaryslipimg.getBytes());
+//			customerDocuments.setCustomerSignature(signimg.getBytes());
+//			
+//			customer.setCustomerDocuments(customerDocuments);
 			
 			customerRepository.save(customer);
 			
