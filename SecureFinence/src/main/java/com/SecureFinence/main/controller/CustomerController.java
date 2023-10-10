@@ -36,7 +36,7 @@ public class CustomerController {
 			@RequestPart(name ="form16",required = true) MultipartFile form16g,
 			@RequestPart(name ="itr",required = true)MultipartFile itrDoc){
 		
-		
+		System.out.println("abc");
 		customerService.saveCustomer(Customerprofile,customerpaddr,customerladdr,
 				bankDetails,panimg,aadimg,profileimgimg,signimg,salaryslipimg,statement,
 				quationdoc,form16g,itrDoc);

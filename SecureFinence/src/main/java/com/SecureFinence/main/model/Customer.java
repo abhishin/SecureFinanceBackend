@@ -24,7 +24,6 @@ public class Customer {
 	private String lastName;
 	private String motherName;
 	private int dob;
-	
 	private String email;
 	private long adharNumber;
 	private long mobileNumber;
