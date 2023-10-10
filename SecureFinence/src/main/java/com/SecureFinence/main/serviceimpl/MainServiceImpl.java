@@ -6,7 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.SecureFinence.main.model.Employee;
 import com.SecureFinence.main.model.Enquiry;
+import com.SecureFinence.main.repository.Admin_Repository;
 import com.SecureFinence.main.repository.EnquiryRepository;
 import com.SecureFinence.main.service.MainService;
 @Service
@@ -14,6 +16,9 @@ public class MainServiceImpl implements MainService{
 	
 	@Autowired
 	EnquiryRepository er;
+	
+	@Autowired
+	Admin_Repository ad;
 
 	@Override
 	public void saveEnquiry(Enquiry en) {
@@ -40,5 +45,23 @@ public class MainServiceImpl implements MainService{
 		er.save(enquiryObject);
 		
 	}
+///////////////////////////////////admin crud//////////////////////////////////////////////////
+	@Override
+	public void saveemployee(Employee e) {
+		ad.save(e);
+		
+	}
 
+	@Override
+	public List<Employee> getemployee() {
+		
+		return (List<Employee>) ad.findAll();
+	}
+
+	@Override
+	public void deleteemployee(int i) {
+		ad.deleteById(i);
+		
+	}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
