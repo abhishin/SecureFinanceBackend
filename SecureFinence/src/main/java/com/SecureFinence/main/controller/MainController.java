@@ -60,25 +60,25 @@ public String deleteemployee(@PathVariable int i) {
 	
 	
 	
-//	
-//	@PostMapping(value = "/postEnquiry")
-//	public ResponseEntity<Enquiry> saveEnq(@RequestBody Enquiry en){
-//		
-//		service.saveEnquiry(en);
-//		
-//		return new ResponseEntity<Enquiry>(HttpStatus.CREATED);
-//		
-//	}
-//	
-//
-//	@GetMapping(value = "/get_Enquiry")
-//	public ResponseEntity<List<Enquiry>> getEnquiryData(){
-//		
-//	List<Enquiry> Alldata =	service.getAllEnquiry();
-//		
-//		return new ResponseEntity<List<Enquiry>>( Alldata, HttpStatus.OK);
-//	}
-//	
+	
+	@PostMapping(value = "/postEnquiry")
+	public ResponseEntity<Enquiry> saveEnq(@RequestBody Enquiry en){
+		
+		service.saveEnquiry(en);
+		
+		return new ResponseEntity<Enquiry>(HttpStatus.CREATED);
+		
+	}
+	
+
+	@GetMapping(value = "/get_Enquiry")
+	public ResponseEntity<List<Enquiry>> getEnquiryData(){
+		
+	List<Enquiry> alldata =	service.getAllEnquiry();
+		
+		return new ResponseEntity<List<Enquiry>>( alldata, HttpStatus.OK);
+	}
+	
 //	@PutMapping("/getCibilScore/{enquiryId}")
 //	public ResponseEntity<Enquiry> getCibilScore(@PathVariable int enquiryId,
 //			@RequestBody Enquiry enquiryObject) throws EnquiryNotFoundException  {

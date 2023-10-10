@@ -21,7 +21,7 @@ public class CustomerPermantAddress {
 	private String cityName;
 	private String districtName;
 	private String landMark;
-	private String ststeName;
+	private String stateName;
 	private int pinCodeNumber;
 	
 

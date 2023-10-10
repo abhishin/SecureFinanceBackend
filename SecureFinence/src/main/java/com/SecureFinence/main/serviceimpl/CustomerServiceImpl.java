@@ -35,29 +35,29 @@ public class CustomerServiceImpl implements CustomerService{
 		
 		try {
 			Customer customer=mapper.readValue(customerprofile, Customer.class);
-			
+			System.out.println("IN Customer Service..!");
 			CustomerPermantAddress customerPermantAddress=mapper.readValue(customerpaddr, CustomerPermantAddress.class);
 			
 			CustomerLocalAddress customerLocalAddress=mapper.readValue(customerladdr, CustomerLocalAddress.class);
 			CustomerBankDetails customerBankDetails =mapper.readValue(bankDetails, CustomerBankDetails.class);
-//			
-//			customer.setCustomerPermantAddress(customerPermantAddress);
-//			customer.setCustomerLocalAddress(customerLocalAddress);
-//			customer.setCustomerBankDetails(customerBankDetails);
+			
+			customer.setCustomerPermantAddress(customerPermantAddress);
+			customer.setCustomerLocalAddress(customerLocalAddress);
+			customer.setCustomerBankDetails(customerBankDetails);
 			
 			CustomerDocuments customerDocuments=new CustomerDocuments();
 			
-//			customerDocuments.setCustomerAdhar(aadimg.getBytes());
-//			customerDocuments.setCustomerBAnkStatement(statement.getBytes());
-//			customerDocuments.setCustomerCarQuotation(quationdoc.getBytes());
-//			customerDocuments.setCustomerForm16(form16g.getBytes());
-//			customerDocuments.setCustomerITR(itrDoc.getBytes());
-//			customerDocuments.setCustomerPan(panimg.getBytes());
-//			customerDocuments.setCustomerProfilePhoto(panimg.getBytes());
-//			customerDocuments.setCustomerSalarySlip(salaryslipimg.getBytes());
-//			customerDocuments.setCustomerSignature(signimg.getBytes());
-//			
-//			customer.setCustomerDocuments(customerDocuments);
+			customerDocuments.setCustomerAdhar(aadimg.getBytes());
+			customerDocuments.setCustomerBAnkStatement(statement.getBytes());
+			customerDocuments.setCustomerCarQuotation(quationdoc.getBytes());
+			customerDocuments.setCustomerForm16(form16g.getBytes());
+			customerDocuments.setCustomerITR(itrDoc.getBytes());
+			customerDocuments.setCustomerPan(panimg.getBytes());
+			customerDocuments.setCustomerProfilePhoto(panimg.getBytes());
+			customerDocuments.setCustomerSalarySlip(salaryslipimg.getBytes());
+			customerDocuments.setCustomerSignature(signimg.getBytes());
+			
+			customer.setCustomerDocuments(customerDocuments);
 			
 			customerRepository.save(customer);
 			
