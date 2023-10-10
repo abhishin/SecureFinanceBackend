@@ -23,7 +23,7 @@ public class Customer {
 	private String middleName;
 	private String lastName;
 	private String motherName;
-	private int dob;
+	private String dob;
 	
 	private String email;
 	private long adharNumber;
