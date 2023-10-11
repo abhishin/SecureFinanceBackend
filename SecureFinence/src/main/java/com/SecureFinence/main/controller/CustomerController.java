@@ -13,7 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.SecureFinence.main.model.Customer;
 import com.SecureFinence.main.service.CustomerService;
-@CrossOrigin()
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/customer")
 public class CustomerController {
