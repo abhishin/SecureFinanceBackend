@@ -102,7 +102,7 @@ public class MainController {
 		return new ResponseEntity<Employee>(e, HttpStatus.OK);
 	}
 
-	@GetMapping("/getemployee")
+	@GetMapping("/getEmployee")
 	public ResponseEntity<List<Employee>> getemployee() {
 		List<Employee> emplist = service.getemployee();
 		return new ResponseEntity<List<Employee>>(emplist, HttpStatus.OK) ;

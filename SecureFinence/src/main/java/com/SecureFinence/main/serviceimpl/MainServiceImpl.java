@@ -11,7 +11,6 @@ import org.springframework.web.multipart.MultipartFile;
 import com.SecureFinence.main.model.Employee;
 import com.SecureFinence.main.model.EmployeeDocuments;
 import com.SecureFinence.main.model.Enquiry;
-import com.SecureFinence.main.model.UserDetails;
 import com.SecureFinence.main.repository.Admin_Repository;
 import com.SecureFinence.main.repository.Employee_Repository;
 import com.SecureFinence.main.repository.EnquiryRepository;
@@ -40,7 +39,7 @@ public class MainServiceImpl implements MainService{
 
 	@Override
 	public List<Enquiry> getAllEnquiry() {
-		// TODO Auto-generated method stub
+		
 		return (List<Enquiry>) er.findAll();
 	}
 
@@ -56,7 +55,7 @@ public class MainServiceImpl implements MainService{
 		er.save(enquiryObject);
 		
 	}
-///////////////////////////////////admin crud//////////////////////////////////////////////////
+
 	
 
 	@Override
@@ -70,7 +69,7 @@ public class MainServiceImpl implements MainService{
 		ad.deleteById(i);
 		
 	}
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 	
 
@@ -105,10 +104,10 @@ ObjectMapper mapper= new ObjectMapper();
 			
 			
 		} catch (JsonMappingException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		return null;
