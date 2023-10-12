@@ -71,6 +71,14 @@ public class CustomerServiceImpl implements CustomerService{
 		
 		
 	}
+
+
+
+	@Override
+	public Iterable<Customer> getall() {
+		// TODO Auto-generated method stub
+		return customerRepository.findAll();
+	}
 	
 
 	

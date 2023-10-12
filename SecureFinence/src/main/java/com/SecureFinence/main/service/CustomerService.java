@@ -11,6 +11,8 @@ public interface CustomerService {
 			MultipartFile salaryslipimg, MultipartFile statement, MultipartFile quationdoc, MultipartFile form16g,
 			MultipartFile itrDoc);
 
+	public Iterable<Customer> getall();
+
 	
 	
 

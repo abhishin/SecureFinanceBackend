@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestPart;
@@ -13,7 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.SecureFinence.main.model.Customer;
 import com.SecureFinence.main.service.CustomerService;
-@CrossOrigin()
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/customer")
 public class CustomerController {
@@ -47,6 +48,17 @@ public class CustomerController {
 		
 	}
 	
+	
+	@GetMapping("/getcustomer")
+	public Iterable<Customer> getcustomer(){
+		Iterable<Customer>  getAlldata=customerService.getall();
+		
+		
+		
+		
+		return getAlldata;
+		
+	}
 	
 	
 	
